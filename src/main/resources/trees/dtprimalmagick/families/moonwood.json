@@ -1,4 +1,5 @@
 {
+  "type": "dtprimalmagick:phasing",
   "common_leaves": "dtprimalmagick:moonwood",
   "common_species": "dtprimalmagick:moonwood",
   "primitive_log": "primalmagick:moonwood_log",
@@ -7,5 +8,7 @@
   "texture_overrides": {
     "branch": "primalmagick:block/moonwood_log_full",
     "branch_top": "primalmagick:block/moonwood_log_top_full"
-  }
+  },
+  "phase_sync": "MOON",
+  "pulse_color": 13753827
 }

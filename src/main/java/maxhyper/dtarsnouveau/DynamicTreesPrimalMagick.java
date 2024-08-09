@@ -6,6 +6,7 @@ import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
 import com.ferreusveritas.dynamictrees.systems.pod.Pod;
 import com.ferreusveritas.dynamictrees.tree.family.Family;
 import com.ferreusveritas.dynamictrees.tree.species.Species;
+import maxhyper.dtarsnouveau.init.DTPrimalMagickClient;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -34,6 +35,7 @@ public class DynamicTreesPrimalMagick {
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
+        DTPrimalMagickClient.setup();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

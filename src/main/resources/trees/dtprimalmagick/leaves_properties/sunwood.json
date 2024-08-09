@@ -1,9 +1,11 @@
 {
+  "type": "dtprimalmagick:phasing",
   "primitive_leaves": "primalmagick:sunwood_leaves",
   "texture_overrides": {
     "leaves": "primalmagick:block/sunwood_leaves_full"
   },
   "model_overrides": {
     "leaves": "primalmagick:block/sunwood_leaves_full"
-  }
+  },
+  "phase_sync": "SUN"
 }

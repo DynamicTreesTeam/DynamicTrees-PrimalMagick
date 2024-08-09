@@ -1,0 +1,8 @@
+{
+  "loader": "dynamictrees:branch",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "bark": "primalmagick:block/moonwood_log_waxing",
+    "rings": "primalmagick:block/moonwood_log_top_waxing"
+  }
+}
