@@ -1,0 +1,7 @@
+{
+  "parent": "dynamictrees:item/branch",
+  "textures": {
+    "bark": "primalmagick:block/sunwood_log_full",
+    "rings": "primalmagick:block/sunwood_log_top_full"
+  }
+}

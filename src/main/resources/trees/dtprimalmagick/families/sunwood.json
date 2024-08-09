@@ -1,0 +1,14 @@
+{
+  "common_leaves": "dtprimalmagick:sunwood",
+  "common_species": "dtprimalmagick:sunwood",
+  "primitive_log": "primalmagick:sunwood_log",
+  "primitive_stripped_log": "primalmagick:stripped_sunwood_log",
+  "max_branch_radius": 24,
+  "branch_properties": {
+    "light": 10
+  },
+  "texture_overrides": {
+    "branch": "primalmagick:block/sunwood_log_full",
+    "branch_top": "primalmagick:block/sunwood_log_top_full"
+  }
+}

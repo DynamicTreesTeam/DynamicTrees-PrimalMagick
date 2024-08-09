@@ -1,0 +1,11 @@
+{
+  "common_leaves": "dtprimalmagick:moonwood",
+  "common_species": "dtprimalmagick:moonwood",
+  "primitive_log": "primalmagick:moonwood_log",
+  "primitive_stripped_log": "primalmagick:stripped_moonwood_log",
+  "max_branch_radius": 24,
+  "texture_overrides": {
+    "branch": "primalmagick:block/moonwood_log_full",
+    "branch_top": "primalmagick:block/moonwood_log_top_full"
+  }
+}

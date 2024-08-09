@@ -1,0 +1,7 @@
+{
+  "loader": "dynamictrees:branch",
+  "textures": {
+    "bark": "primalmagick:block/moonwood_log_full",
+    "rings": "primalmagick:block/moonwood_log_top_full"
+  }
+}

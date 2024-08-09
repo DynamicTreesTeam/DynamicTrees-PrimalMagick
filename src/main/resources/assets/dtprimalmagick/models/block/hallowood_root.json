@@ -1,0 +1,6 @@
+{
+  "loader": "dynamictrees:surface_root",
+  "textures": {
+    "bark": "primalmagick:block/hallowood_log"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "loader": "dynamictrees:branch",
+  "textures": {
+    "bark": "primalmagick:block/stripped_hallowood_log",
+    "rings": "primalmagick:block/stripped_hallowood_log_top"
+  }
+}

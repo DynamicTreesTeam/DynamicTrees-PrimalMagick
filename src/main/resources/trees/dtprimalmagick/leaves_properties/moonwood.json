@@ -1,0 +1,9 @@
+{
+  "primitive_leaves": "primalmagick:moonwood_leaves",
+  "texture_overrides": {
+    "leaves": "primalmagick:block/moonwood_leaves_full"
+  },
+  "model_overrides": {
+    "leaves": "primalmagick:block/moonwood_leaves_full"
+  }
+}

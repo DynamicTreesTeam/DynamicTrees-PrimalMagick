@@ -1,0 +1,26 @@
+[
+  {
+    "select": { "tag": "#primalmagick:has_feature/tree_wild_sunwood" },
+    "apply": {
+      "species" : {
+        "method" : "splice_before",
+        "random" : {
+          "dtprimalmagick:sunwood" : 1,
+          "..." : 60
+        }
+      }
+    }
+  },
+  {
+    "select": { "tag": "#primalmagick:has_feature/tree_wild_moonwood" },
+    "apply": {
+      "species" : {
+        "method" : "splice_before",
+        "random" : {
+          "dtprimalmagick:moonwood" : 1,
+          "..." : 60
+        }
+      }
+    }
+  }
+]

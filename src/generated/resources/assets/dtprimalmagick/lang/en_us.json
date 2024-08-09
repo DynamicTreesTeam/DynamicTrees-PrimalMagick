@@ -1,0 +1,11 @@
+{
+  "block.dtprimalmagick.hallowood_branch": "Hallowood Tree",
+  "block.dtprimalmagick.moonwood_branch": "Moonwood Tree",
+  "block.dtprimalmagick.sunwood_branch": "Sunwood Tree",
+  "item.dtprimalmagick.hallowood_seed": "Hallowood Seed",
+  "item.dtprimalmagick.moonwood_seed": "Moonwood Seed",
+  "item.dtprimalmagick.sunwood_seed": "Sunwood Seed",
+  "species.dtprimalmagick.hallowood": "Hallowood",
+  "species.dtprimalmagick.moonwood": "Moonwood",
+  "species.dtprimalmagick.sunwood": "Sunwood"
+}
