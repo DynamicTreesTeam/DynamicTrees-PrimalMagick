@@ -2,10 +2,16 @@ package maxhyper.dtarsnouveau.blocks;
 
 import com.ferreusveritas.dynamictrees.block.leaves.DynamicLeavesBlock;
 import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
+import com.ferreusveritas.dynamictrees.systems.GrowSignal;
 import com.verdantartifice.primalmagick.common.blocks.trees.AbstractPhasingLeavesBlock;
 import com.verdantartifice.primalmagick.common.blockstates.properties.TimePhase;
+import maxhyper.dtarsnouveau.trees.PhasingLeavesProperties;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -23,6 +29,34 @@ public class PhasingLeavesBlock extends DynamicLeavesBlock {
 
     public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder.add(PHASE));
+    }
+
+    @Override
+    public PhasingLeavesProperties getProperties(BlockState blockState) {
+        return (PhasingLeavesProperties) super.getProperties(blockState);
+    }
+
+    @Override
+    public BlockState getLeavesBlockStateForPlacement(LevelAccessor level, BlockPos pos, BlockState leavesStateWithHydro, int oldHydro, boolean worldGen) {
+        BlockState state = super.getLeavesBlockStateForPlacement(level, pos, leavesStateWithHydro, oldHydro, worldGen);
+        return state.setValue(PHASE, getProperties(state).getCurrentPhase(level));
+    }
+
+    public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource random) {
+        super.randomTick(state, worldIn, pos, random);
+        TimePhase newPhase = getProperties(state).getCurrentPhase(worldIn);
+        if (newPhase != state.getValue(PHASE)) {
+            worldIn.setBlock(pos, state.setValue(PHASE, newPhase), 3);
+        }
+    }
+
+    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos) {
+        BlockState state = super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+        TimePhase newPhase = getProperties(state).getCurrentPhase(worldIn);
+        if (newPhase != state.getValue(PHASE)) {
+            state = state.setValue(PHASE, newPhase);
+        }
+        return state;
     }
 
     @Override

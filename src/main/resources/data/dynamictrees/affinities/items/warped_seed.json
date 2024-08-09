@@ -1,0 +1,5 @@
+{
+  "type": "item",
+  "base": "minecraft:warped_fungus",
+  "target": "dynamictrees:warped_seed"
+}

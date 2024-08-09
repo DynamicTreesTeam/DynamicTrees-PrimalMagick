@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
-      "model": "dtprimalmagick:block/sunwood_branch"
+    "phase=full": {
+      "model": "dtprimalmagick:block/sunwood_branch_full"
+    },
+    "phase=waxing": {
+      "model": "dtprimalmagick:block/sunwood_branch_waxing"
+    },
+    "phase=waning": {
+      "model": "dtprimalmagick:block/sunwood_branch_waning"
+    },
+    "phase=faded": {
+      "model": "dtprimalmagick:block/sunwood_branch_faded"
     }
   }
 }

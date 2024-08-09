@@ -1,7 +1,0 @@
-{
-  "loader": "dynamictrees:branch",
-  "textures": {
-    "bark": "primalmagick:block/stripped_sunwood_log",
-    "rings": "primalmagick:block/stripped_sunwood_log_top"
-  }
-}

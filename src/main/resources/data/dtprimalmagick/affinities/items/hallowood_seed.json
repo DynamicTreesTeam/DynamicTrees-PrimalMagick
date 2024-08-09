@@ -1,0 +1,5 @@
+{
+  "type": "item",
+  "base": "primalmagick:hallowood_sapling",
+  "target": "dtprimalmagick:hallowood_seed"
+}

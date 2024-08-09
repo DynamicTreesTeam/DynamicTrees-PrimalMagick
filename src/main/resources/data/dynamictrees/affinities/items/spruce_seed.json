@@ -1,0 +1,5 @@
+{
+  "type": "item",
+  "base": "minecraft:spruce_sapling",
+  "target": "dynamictrees:spruce_seed"
+}

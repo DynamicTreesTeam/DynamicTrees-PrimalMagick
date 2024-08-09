@@ -1,0 +1,8 @@
+{
+  "loader": "dynamictrees:branch",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "bark": "primalmagick:block/sunwood_log_waning",
+    "rings": "primalmagick:block/sunwood_log_top_waning"
+  }
+}

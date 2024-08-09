@@ -1,0 +1,5 @@
+{
+  "type": "item",
+  "base": "minecraft:red_mushroom",
+  "target": "dynamictreesplus:red_mushroom_seed"
+}

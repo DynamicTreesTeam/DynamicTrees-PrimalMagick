@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
-      "model": "dtprimalmagick:block/stripped_moonwood_branch"
+    "phase=full": {
+      "model": "dtprimalmagick:block/stripped_moonwood_branch_full"
+    },
+    "phase=waxing": {
+      "model": "dtprimalmagick:block/stripped_moonwood_branch_waxing"
+    },
+    "phase=waning": {
+      "model": "dtprimalmagick:block/stripped_moonwood_branch_waning"
+    },
+    "phase=faded": {
+      "model": "dtprimalmagick:block/stripped_moonwood_branch_faded"
     }
   }
 }

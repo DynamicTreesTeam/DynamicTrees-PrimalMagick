@@ -1,0 +1,5 @@
+{
+  "type": "item",
+  "base": "minecraft:dark_oak_sapling",
+  "target": "dynamictrees:dark_oak_seed"
+}

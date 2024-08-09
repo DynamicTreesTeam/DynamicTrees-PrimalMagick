@@ -1,0 +1,5 @@
+{
+  "type": "item",
+  "base": "minecraft:apple",
+  "target": "dynamictrees:apple_oak_seed"
+}

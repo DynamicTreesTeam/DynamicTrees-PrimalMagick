@@ -1,0 +1,11 @@
+{
+  "type": "item",
+  "base": "minecraft:cactus",
+  "remove": {
+    "sun": 4
+  },
+  "add": {
+    "sea": 2
+  },
+  "target": "dynamictreesplus:saguaro_cactus_seed"
+}

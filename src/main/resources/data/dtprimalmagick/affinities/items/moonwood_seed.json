@@ -1,0 +1,5 @@
+{
+  "type": "item",
+  "base": "primalmagick:moonwood_sapling",
+  "target": "dtprimalmagick:moonwood_seed"
+}

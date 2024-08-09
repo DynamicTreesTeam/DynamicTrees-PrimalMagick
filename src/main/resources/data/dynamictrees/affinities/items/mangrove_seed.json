@@ -1,0 +1,5 @@
+{
+  "type": "item",
+  "base": "minecraft:mangrove_sapling",
+  "target": "dynamictrees:mangrove_seed"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "item",
+  "base": "minecraft:cactus",
+  "remove": {
+    "sun": 2
+  },
+  "target": "dynamictreesplus:pillar_cactus_seed"
+}

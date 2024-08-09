@@ -1,0 +1,9 @@
+{
+  "type": "item",
+  "base": "minecraft:cocoa_beans",
+  "add": {
+    "earth": 3,
+    "sun": 3
+  },
+  "target": "dynamictrees:cocoa_seed"
+}

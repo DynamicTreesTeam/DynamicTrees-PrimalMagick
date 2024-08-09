@@ -1,0 +1,5 @@
+{
+  "type": "item",
+  "base": "minecraft:cherry_sapling",
+  "target": "dynamictrees:cherry_seed"
+}
