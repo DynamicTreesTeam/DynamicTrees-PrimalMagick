@@ -6,7 +6,7 @@
         "method" : "splice_before",
         "random" : {
           "dtprimalmagick:sunwood" : 1,
-          "..." : 60
+          "..." : 90
         }
       }
     }
@@ -18,7 +18,7 @@
         "method" : "splice_before",
         "random" : {
           "dtprimalmagick:moonwood" : 1,
-          "..." : 60
+          "..." : 90
         }
       }
     }
