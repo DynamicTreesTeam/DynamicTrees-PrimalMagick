@@ -8,6 +8,8 @@ import com.google.gson.JsonElement;
 import maxhyper.dtprimalmagick.DynamicTreesPrimalMagick;
 import maxhyper.dtprimalmagick.trees.PhasingLeavesProperties;
 import maxhyper.dtprimalmagick.trees.PhasingTreeFamily;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -21,7 +23,9 @@ public class JsonPropertyAppliers {
     }
     public static void registerFamilyAppliers(PropertyAppliers<Family, JsonElement> appliers) {
         appliers.register("phase_sync", PhasingTreeFamily.class, String.class, PhasingTreeFamily::setPhaseSync)
-                .register("pulse_color", PhasingTreeFamily.class, Integer.class, PhasingTreeFamily::setPulseColor);
+                .register("pulse_color", PhasingTreeFamily.class, Integer.class, PhasingTreeFamily::setPulseColor)
+                .register("chance_to_pulse", PhasingTreeFamily.class, Integer.class, PhasingTreeFamily::setPulseColor)
+                .register("pulsing_branch_item", PhasingTreeFamily.class, Item.class, (family, item) -> family.setPulsingDrops(new ItemStack(item)));
     }
 
     //LEAVES

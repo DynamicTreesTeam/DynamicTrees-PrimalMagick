@@ -10,5 +10,6 @@
     "branch_top": "primalmagick:block/moonwood_log_top_full"
   },
   "phase_sync": "MOON",
-  "pulse_color": 13753827
+  "pulse_color": 13753827,
+  "pulsing_branch_item": "primalmagick:heartwood"
 }

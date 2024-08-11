@@ -8,6 +8,7 @@ import com.verdantartifice.primalmagick.common.blockstates.properties.TimePhase;
 import com.verdantartifice.primalmagick.common.sources.Source;
 import maxhyper.dtprimalmagick.blocks.PhasingBranchBlock;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.LevelAccessor;
 
 import java.util.Locale;
@@ -16,8 +17,12 @@ import java.util.function.Function;
 public class PhasingTreeFamily extends Family {
 
     public static final TypedRegistry.EntryType<Family> TYPE = TypedRegistry.newType(PhasingTreeFamily::new);
+
     private int pulseColor = Source.SUN.getColor();
+    private int chanceToPulse = 40;
+    private int minimumRadiusToDropPulsing = 4;
     private PhaseSync phaseSync = PhaseSync.SUN;
+    private ItemStack pulsingDrops = ItemStack.EMPTY;
 
     public enum PhaseSync {
         SUN (TimePhase::getSunPhase),
@@ -41,12 +46,36 @@ public class PhasingTreeFamily extends Family {
         return branch;
     }
 
+    public void setPulseColor (int color){
+        this.pulseColor = color;
+    }
+
     public int getPulseColor() {
         return pulseColor;
     }
 
-    public void setPulseColor (int color){
-        this.pulseColor = color;
+    public void setChanceToPulse (int chance){
+        this.chanceToPulse = chance;
+    }
+
+    public int getChanceToPulse() {
+        return chanceToPulse;
+    }
+
+    public void setPulsingDrops(ItemStack pulsingDrops) {
+        this.pulsingDrops = pulsingDrops;
+    }
+
+    public ItemStack getPulsingDrops() {
+        return pulsingDrops;
+    }
+
+    public void setMinimumRadiusToDropPulsing(int minimumRad) {
+        this.minimumRadiusToDropPulsing = minimumRad;
+    }
+
+    public int getMinimumRadiusToDropPulsing() {
+        return minimumRadiusToDropPulsing;
     }
 
     public TimePhase getCurrentPhase(LevelAccessor level){
@@ -56,4 +85,5 @@ public class PhasingTreeFamily extends Family {
     public void setPhaseSync (String phase){
         this.phaseSync = PhasingTreeFamily.PhaseSync.valueOf(phase.toUpperCase(Locale.ENGLISH));
     }
+
 }

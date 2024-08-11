@@ -10,5 +10,6 @@
     "branch_top": "primalmagick:block/sunwood_log_top_full"
   },
   "phase_sync": "SUN",
-  "pulse_color": 16369692
+  "pulse_color": 16369692,
+  "pulsing_branch_item": "primalmagick:heartwood"
 }

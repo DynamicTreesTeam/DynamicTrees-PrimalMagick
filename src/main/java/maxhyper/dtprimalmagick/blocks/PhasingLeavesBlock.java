@@ -61,4 +61,15 @@ public class PhasingLeavesBlock extends DynamicLeavesBlock {
     public int getLightEmission(BlockState state, BlockGetter level, BlockPos pos) {
         return state.getValue(PHASE).getLightLevel();
     }
+
+    @Override
+    public float getShadeBrightness(BlockState state, BlockGetter level, BlockPos pos) {
+        return switch (state.getValue(PHASE)){
+            case FULL -> 1F;
+            case WAXING -> 0.75F;
+            case WANING -> 0.5F;
+            case FADED -> 0.25F;
+        };
+    }
+
 }
