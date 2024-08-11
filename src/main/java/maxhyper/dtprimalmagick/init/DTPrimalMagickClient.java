@@ -1,6 +1,6 @@
-package maxhyper.dtarsnouveau.init;
+package maxhyper.dtprimalmagick.init;
 
-import maxhyper.dtarsnouveau.DynamicTreesPrimalMagick;
+import maxhyper.dtprimalmagick.DynamicTreesPrimalMagick;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.common.Mod;
 

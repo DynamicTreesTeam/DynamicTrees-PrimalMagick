@@ -1,11 +1,10 @@
-package maxhyper.dtarsnouveau.trees;
+package maxhyper.dtprimalmagick.trees;
 
 import com.ferreusveritas.dynamictrees.api.registry.TypedRegistry;
 import com.ferreusveritas.dynamictrees.block.leaves.DynamicLeavesBlock;
 import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
 import com.verdantartifice.primalmagick.common.blockstates.properties.TimePhase;
-import maxhyper.dtarsnouveau.blocks.PhasingBranchBlock;
-import maxhyper.dtarsnouveau.blocks.PhasingLeavesBlock;
+import maxhyper.dtprimalmagick.blocks.PhasingLeavesBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.state.BlockBehaviour;

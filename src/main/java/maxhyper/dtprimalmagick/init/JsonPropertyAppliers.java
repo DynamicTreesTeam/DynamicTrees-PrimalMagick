@@ -1,13 +1,13 @@
-package maxhyper.dtarsnouveau.init;
+package maxhyper.dtprimalmagick.init;
 
 import com.ferreusveritas.dynamictrees.api.applier.ApplierRegistryEvent;
 import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
 import com.ferreusveritas.dynamictrees.deserialisation.PropertyAppliers;
 import com.ferreusveritas.dynamictrees.tree.family.Family;
 import com.google.gson.JsonElement;
-import maxhyper.dtarsnouveau.DynamicTreesPrimalMagick;
-import maxhyper.dtarsnouveau.trees.PhasingLeavesProperties;
-import maxhyper.dtarsnouveau.trees.PhasingTreeFamily;
+import maxhyper.dtprimalmagick.DynamicTreesPrimalMagick;
+import maxhyper.dtprimalmagick.trees.PhasingLeavesProperties;
+import maxhyper.dtprimalmagick.trees.PhasingTreeFamily;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
