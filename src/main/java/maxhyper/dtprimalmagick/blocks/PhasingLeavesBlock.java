@@ -37,13 +37,15 @@ public class PhasingLeavesBlock extends DynamicLeavesBlock {
     @Override
     public BlockState getLeavesBlockStateForPlacement(LevelAccessor level, BlockPos pos, BlockState leavesStateWithHydro, int oldHydro, boolean worldGen) {
         BlockState state = super.getLeavesBlockStateForPlacement(level, pos, leavesStateWithHydro, oldHydro, worldGen);
-        return state.setValue(PHASE, getProperties(state).getCurrentPhase(level));
+        if (state.is(this))
+            return state.setValue(PHASE, getProperties(state).getCurrentPhase(level));
+        return state;
     }
 
     public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource random) {
         super.randomTick(state, worldIn, pos, random);
         TimePhase newPhase = getProperties(state).getCurrentPhase(worldIn);
-        if (newPhase != state.getValue(PHASE)) {
+        if (state.is(this) && newPhase != state.getValue(PHASE)) {
             worldIn.setBlock(pos, state.setValue(PHASE, newPhase), 3);
         }
     }
@@ -51,7 +53,7 @@ public class PhasingLeavesBlock extends DynamicLeavesBlock {
     public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos) {
         BlockState state = super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
         TimePhase newPhase = getProperties(state).getCurrentPhase(worldIn);
-        if (newPhase != state.getValue(PHASE)) {
+        if (state.is(this) && newPhase != state.getValue(PHASE)) {
             state = state.setValue(PHASE, newPhase);
         }
         return state;

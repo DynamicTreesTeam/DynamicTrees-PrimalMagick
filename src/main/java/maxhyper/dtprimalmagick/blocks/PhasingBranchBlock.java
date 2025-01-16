@@ -82,13 +82,14 @@ public class PhasingBranchBlock extends ThickBranchBlock {
         BlockState branchState = level.getBlockState(pos);
         boolean replacingWater = branchState.getFluidState() == Fluids.WATER.getSource(false);
         boolean setWaterlogged = replacingWater && radius <= 7;
-        boolean isPulsing = branchState.getBlock() instanceof PhasingBranchBlock ?
+        boolean isPulsing = branchState.is(this) ?
                 branchState.getValue(PULSING) : (level.getRandom().nextInt(getFamily().getChanceToPulse()) == 0);
         TimePhase phase = getFamily().getCurrentPhase(level);
-        level.setBlock(pos, this.getStateForRadius(radius)
+        BlockState newState = this.getStateForRadius(radius);
+        level.setBlock(pos, newState.is(this) ? newState
                         .setValue(WATERLOGGED, setWaterlogged)
                         .setValue(PULSING, isPulsing)
-                        .setValue(PHASE, phase), flags);
+                        .setValue(PHASE, phase) : newState, flags);
         destroyMode = DynamicTrees.DestroyMode.SLOPPY;
         return radius;
     }
@@ -96,7 +97,7 @@ public class PhasingBranchBlock extends ThickBranchBlock {
     public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource random) {
         super.randomTick(state, worldIn, pos, random);
         TimePhase newPhase = getFamily().getCurrentPhase(worldIn);
-        if (newPhase != state.getValue(PHASE)) {
+        if (state.is(this) && newPhase != state.getValue(PHASE)) {
             worldIn.setBlock(pos, state.setValue(PHASE, newPhase), 3);
         }
     }
@@ -104,7 +105,7 @@ public class PhasingBranchBlock extends ThickBranchBlock {
     public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos) {
         BlockState state = super.updateShape(stateIn, facing, facingState, worldIn, currentPos, facingPos);
         TimePhase newPhase = getFamily().getCurrentPhase(worldIn);
-        if (newPhase != state.getValue(PHASE)) {
+        if (state.is(this) && newPhase != state.getValue(PHASE)) {
             state = state.setValue(PHASE, newPhase);
         }
         return state;
@@ -115,7 +116,7 @@ public class PhasingBranchBlock extends ThickBranchBlock {
 
         int branchRad = TreeHelper.getRadius(level, pos);
         int chance = 32/branchRad;
-        if (state.getValue(PULSING) && random.nextInt(chance) == 0) {
+        if (state.is(this) && state.getValue(PULSING) && random.nextInt(chance) == 0) {
             float radius = branchRad/4f;
             spellImpact(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, radius, getFamily().getPulseColor(), level);
         }
